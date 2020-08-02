@@ -1,14 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="@dimen/_30dp"
     tools:context=".fragment.SettingFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_setting"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12dp" >
 
-</FrameLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_12dp">
+
+            <ImageView
+                android:id="@+id/iv_cover"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/cover" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_profile_setting"
+                android:layout_width="@dimen/_160dp"
+                android:layout_height="@dimen/_160dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_150dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/profile" />
+
+            <TextView
+                android:id="@+id/tv_user_name_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_profile_setting"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_15dp"
+                android:layout_marginBottom="@dimen/_20dp"
+                android:text="@string/text_user_name"
+                android:textSize="@dimen/_19sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cv_setting"
+        android:layout_marginTop="@dimen/_40dp"
+        android:background="@color/colorProfile"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/_6dp">
+
+        <ImageView
+            android:id="@+id/iv_facebook"
+            android:layout_width="@dimen/_60dp"
+            android:layout_height="@dimen/_60dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_2dp"
+            android:layout_marginEnd="@dimen/_35dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/fb" />
+
+        <ImageView
+            android:id="@+id/iv_instagram"
+            android:layout_width="@dimen/_60dp"
+            android:layout_height="@dimen/_60dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_2dp"
+            android:layout_marginEnd="@dimen/_35dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/instagram" />
+        <ImageView
+            android:id="@+id/iv_website"
+            android:layout_width="@dimen/_60dp"
+            android:layout_height="@dimen/_60dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_2dp"
+            android:layout_marginEnd="@dimen/_35dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/website" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

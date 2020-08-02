@@ -1,31 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/login"
-    tools:context=".SigninActivity">
+    tools:context=".activity.SigninActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/AppTheme.AppBarOverlay">
+
         <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_signin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="?attr/colorPrimaryDark"
-            app:popupTheme="@style/Widget.Design.AppBarLayout"/>
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
     </com.google.android.material.appbar.AppBarLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="@dimen/_16dp"
+        android:layout_centerInParent="true"
         android:gravity="center_horizontal"
-        android:layout_centerInParent="true">
+        android:orientation="vertical"
+        android:padding="@dimen/_16dp">
+
         <EditText
             android:id="@+id/et_email_signin"
             android:layout_width="match_parent"
@@ -34,7 +36,8 @@
             android:hint="@string/text_email"
             android:inputType="textEmailAddress"
             android:textColor="@android:color/white"
-            android:textColorHint="@android:color/white"/>
+            android:textColorHint="@android:color/white" />
+
         <EditText
             android:id="@+id/et_password_signin"
             android:layout_width="match_parent"
@@ -43,15 +46,15 @@
             android:hint="@string/text_password"
             android:inputType="textPassword"
             android:textColor="@android:color/white"
-            android:textColorHint="@android:color/white"/>
+            android:textColorHint="@android:color/white" />
+
         <Button
+            android:id="@+id/btn_signin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/btn_signin"
             android:layout_marginTop="@dimen/_32dp"
             android:background="@color/colorPrimaryDark"
             android:text="@string/text_signin"
-            android:textColor="@android:color/white"/>
+            android:textColor="@android:color/white" />
     </LinearLayout>
-
 </RelativeLayout>

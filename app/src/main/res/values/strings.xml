@@ -8,4 +8,18 @@
     <string name="text_password">password</string>
     <string name="text_signin">singin</string>
     <string name="text_signup">singup</string>
+    <string name="welcome">welcome</string>
+    <string name="register">register</string>
+    <string name="login">login</string>
+    <string name="text_email_message">Please write email</string>
+    <string name="text_password_message">Please write password</string>
+    <string name="text_error_message">Error Message :</string>
+    <string name="text_message_username">Please write username</string>
+    <string name="Text_users">Users</string>
+    <string name="text_search_user_here">Search user here . . .</string>
+    <string name="text_signout">Sign out</string>
+    <string name="write_something">Please Write something</string>
+    <string name="updated">Updated Successfully</string>
+    <string name="wait_for_upload">Image is uploading, please wait. . .</string>
+    <string name="upload">Uploading</string>
 </resources>
