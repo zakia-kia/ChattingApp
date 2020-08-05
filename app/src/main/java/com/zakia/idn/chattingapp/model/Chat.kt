@@ -46,7 +46,7 @@ class Chat {
     fun setReceiver(receiver: String?){
         this.receiver = receiver!!
     }
-    fun isSeen(): Boolean? {
+    fun isSeen(): Boolean {
         return iseen
     }
     fun setIseen(iseen: Boolean?){

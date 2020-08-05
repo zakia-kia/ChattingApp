@@ -12,7 +12,7 @@
         android:layout_alignParentEnd="true">
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/iv_profile_chat_right"
+        android:id="@+id/iv_profile_chat"
         android:layout_width="@dimen/_40dp"
         android:layout_height="@dimen/_40dp"
         android:src="@drawable/profile"
@@ -31,13 +31,13 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginStart="@dimen/_6dp"
-        android:layout_toEndOf="@id/iv_profile_chat_right"
+        android:layout_toEndOf="@id/iv_profile_chat"
         android:layout_alignParentEnd="true"
         android:contentDescription="@string/image_view"
         android:visibility="gone" />
 
     <TextView
-        android:id="@+id/tv_seen_right"
+        android:id="@+id/tv_seen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"

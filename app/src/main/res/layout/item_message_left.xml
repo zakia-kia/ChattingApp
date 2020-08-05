@@ -5,7 +5,7 @@
     android:padding="8dp">
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/iv_profile_chat_left"
+        android:id="@+id/iv_profile_chat"
         android:layout_width="@dimen/_40dp"
         android:layout_height="@dimen/_40dp"
         android:src="@drawable/profile" />
@@ -15,22 +15,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_6dp"
-        android:layout_toEndOf="@id/iv_profile_chat_left"
+        android:layout_toEndOf="@id/iv_profile_chat"
         android:text="@string/text_user_name"
         android:textSize="@dimen/_18sp" />
+
     <ImageView
+        android:id="@+id/iv_image_left"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_toEndOf="@id/iv_profile_chat_left"
         android:layout_marginStart="@dimen/_6dp"
-        android:visibility="gone"
+        android:layout_toEndOf="@id/iv_profile_chat"
         android:contentDescription="@string/image_view"
-        android:id="@+id/iv_image_left"/>
+        android:visibility="gone" />
+
     <TextView
+        android:id="@+id/tv_seen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="gone"
         android:layout_below="@id/tv_show_message"
-        android:id="@+id/tv_seen_left"/>
+        android:visibility="gone" />
 
 </RelativeLayout>
