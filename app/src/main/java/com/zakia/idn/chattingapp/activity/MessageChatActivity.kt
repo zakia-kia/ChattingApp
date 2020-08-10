@@ -105,6 +105,23 @@ class MessageChatActivity : AppCompatActivity() {
     private fun seenMessage(userIdVisit: String?) {
         val reference = FirebaseDatabase.getInstance().reference.child("Chats")
         //aktifin seen listener
+        seenListener = reference!!.addValueEventListener(object  : ValueEventListener{
+            override fun onCancelled(error: DatabaseError) {
+
+            }
+
+            override fun onDataChange(snapshots: DataSnapshot) {
+                for (dataSnapshot in snapshots.children){
+                    val chat = dataSnapshot.getValue(Chat::class.java)
+
+                    if (chat!!.getReceiver().equals(firebaseUser!!.uid) && chat!!.getSender().equals(userIdVisit)){
+                        val hasMap = HashMap<String, Any>()
+                        hasMap["iseen"] = true
+                        dataSnapshot.ref.updateChildren(hasMap)
+                    }
+                }
+            }
+        })
     }
 
     private fun retrieveMessage(senderId: String, receiverId: String?, Imageprofile: String?) {
@@ -268,5 +285,10 @@ class MessageChatActivity : AppCompatActivity() {
 
     private fun sendNotification(receiverId: String, userName: String?, message: String) {
 
+    }
+
+    override fun onPause() {
+        super.onPause()
+        reference!!.removeEventListener(seenListener!!)
     }
 }

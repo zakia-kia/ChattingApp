@@ -19,6 +19,7 @@ class SigninActivity : AppCompatActivity() {
 
         val toolbar: Toolbar = findViewById(R.id.toolbar_signin)
         setSupportActionBar(toolbar)
+
         supportActionBar!!.title = getString(R.string.text_signin)
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         toolbar.setNavigationOnClickListener {
