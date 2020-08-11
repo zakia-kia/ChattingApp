@@ -101,6 +101,7 @@ class MessageChatActivity : AppCompatActivity() {
         }
     }
 
+    //seen
     var seenListener: ValueEventListener? = null
     private fun seenMessage(userIdVisit: String?) {
         val reference = FirebaseDatabase.getInstance().reference.child("Chats")
