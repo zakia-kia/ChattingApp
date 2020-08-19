@@ -29,4 +29,5 @@
     <string name="no_message">No Message</string>
     <string name="image_send">Image Send</string>
     <string name="image_view">image view</string>
+    <string name="send_message">send message</string>
 </resources>

@@ -1,4 +1,4 @@
-package com.zakia.idn.chattingapp.model
+package com.zakia.idn.chattingapp.notification
 
 class Token {
     private var token : String = ""

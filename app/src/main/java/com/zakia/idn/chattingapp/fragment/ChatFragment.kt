@@ -17,9 +17,8 @@ import com.google.firebase.iid.FirebaseInstanceId
 import com.zakia.idn.chattingapp.R
 import com.zakia.idn.chattingapp.adapter.UserAdapter
 import com.zakia.idn.chattingapp.model.ChatList
-import com.zakia.idn.chattingapp.model.Token
+import com.zakia.idn.chattingapp.notification.Token
 import com.zakia.idn.chattingapp.model.Users
-import java.util.*
 import kotlin.collections.ArrayList
 
 /**
